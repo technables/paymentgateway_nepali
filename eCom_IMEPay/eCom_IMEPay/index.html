@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>IME Pay</title>
+    <script src="jquery-1.9.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#lnk").click(function () {
+
+                let orderID = $('#orderID').val();
+
+                if (parseInt(orderID) > 0) {
+                    location.href = "/IMEPay.aspx?TXNID=" + orderID;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>welcome to IME Pay payment module</h1>
+    Please enter random orderid to check the payment process
+    <br />
+    <input type="text" id="orderID" />
+    <a id="lnk" href="#">Click here for payment demo</a>
+
+
+</body>
+</html>
